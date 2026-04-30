@@ -43,7 +43,6 @@ Update `privacy.html` and/or `terms.html` whenever ANY of the following happens:
 
 Track known-but-not-yet-resolved items here:
 
-- [ ] Replace "Bet Tracker" with legal entity name throughout terms.html once LLC is filed (sections: Ownership, Limitation of Liability, Governing Law)
 - [ ] Confirm final privacy contact email before App Store submission
 - [ ] Add analytics/crash reporting processor to privacy.html if/when added (PostHog, Sentry, etc.)
 
