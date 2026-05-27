@@ -1,9 +1,9 @@
 # Privacy Policy
 
 **App Name:** Bet Tracker  
-**Developer:** Bet Tracker  
+**Developer:** BartRose Ventures LLC LLC  
 **Effective Date:** April 24, 2026  
-**Last Updated:** April 24, 2026
+**Last Updated:** May 15, 2026
 
 ---
 
@@ -19,10 +19,13 @@ Welcome to Bet Tracker ("we," "us," or "our"). This Privacy Policy explains how 
 - **Account information** — email address and username when you register
 - **Bet data** — sports bets you log including sport, matchup, pick, odds, stake, and result
 - **Group data** — groups you create or join, including group name and membership
+- **Group chat messages** — messages you send in group chats, visible to other members of that group
 
 ### Information Collected Automatically
 - **Usage data** — how you interact with the App (screens visited, features used)
 - **Device information** — device type and operating system version
+- **Push notification token** — a device token stored when you grant push notification permission, linked to your account and used solely to deliver push notifications
+- **Crash and performance data** — error reports and performance traces collected via Sentry, not linked to your identity, used for app stability and debugging
 
 ### Information We Do NOT Collect
 - Payment or financial account information
@@ -58,7 +61,8 @@ We use the following third-party services to operate the App:
 | Service | Purpose | Privacy Policy |
 |---------|---------|----------------|
 | Supabase (PostgreSQL) | Backend-as-a-service provider. Your account data, bet history, group membership, and all App content is stored in a PostgreSQL database managed by Supabase, Inc. Supabase also handles authentication (email/password sign-in, session tokens, and password resets) on our behalf. Supabase is our primary data processor under applicable privacy frameworks. | [supabase.com/privacy](https://supabase.com/privacy) |
-| Expo | App development and delivery platform | [expo.dev/privacy](https://expo.dev/privacy) |
+| Expo | App development and delivery platform. Your device's push notification token is transmitted to Expo's push notification service to deliver notifications on our behalf. | [expo.dev/privacy](https://expo.dev/privacy) |
+| Sentry | Crash reporting and performance monitoring. Error reports and performance traces are collected automatically and are not linked to your identity. | [sentry.io/privacy](https://sentry.io/privacy) |
 
 These services may process your data in accordance with their own privacy policies.
 
@@ -116,8 +120,8 @@ We may update this Privacy Policy from time to time. We will notify you of any m
 
 If you have questions or concerns about this Privacy Policy, please contact us at:
 
-**Bet Tracker**  
-Email: zpbartlett@gmail.com
+**BartRose Ventures LLC LLC**  
+Email: info@bartroseventures.com
 
 ---
 
