@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — Bet Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #ffffff;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 540px; margin: 0 auto; }
+    h1 { font-size: 1.75rem; margin: 0 0 0.5rem; }
+    .back { display: inline-block; color: #0066cc; text-decoration: none; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back:hover { text-decoration: underline; }
+    .intro { color: #444; margin: 0 0 1.5rem; }
+    .info-box {
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .info-box h2 { font-size: 1rem; margin: 0 0 0.75rem; }
+    .info-box ul { margin: 0; padding-left: 1.25rem; color: #444; font-size: 0.95rem; }
+    .info-box li { margin-bottom: 0.3rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
+    input[type="email"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      outline: none;
+    }
+    input[type="email"]:focus { border-color: #0066cc; box-shadow: 0 0 0 3px rgba(0,102,204,0.15); }
+    button {
+      margin-top: 1rem;
+      width: 100%;
+      padding: 0.85rem;
+      background: #d32f2f;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover:not(:disabled) { background: #b71c1c; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .message {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      display: none;
+    }
+    .message.success { background: #e8f5e9; border: 1px solid #a5d6a7; color: #1b5e20; }
+    .message.error   { background: #fce4ec; border: 1px solid #f48fb1; color: #880e4f; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e5e5;
+      font-size: 0.85rem;
+      color: #777;
+    }
+    footer a { color: #0066cc; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="index.html">← Legal Documents</a>
+    <h1>Delete Your Account</h1>
+    <p class="intro">
+      Enter the email address associated with your Bet Tracker account. We'll send you a
+      confirmation link to complete the deletion.
+    </p>
+
+    <div class="info-box">
+      <h2>What gets deleted</h2>
+      <ul>
+        <li>Your profile, username, and account credentials</li>
+        <li>Your group memberships and competition history</li>
+        <li>Your notification preferences and push token</li>
+        <li>Your H2H challenge history</li>
+      </ul>
+      <p style="margin:0.75rem 0 0;font-size:0.9rem;color:#555">
+        <strong>Retained (anonymized):</strong> Group chat messages and bets you logged are anonymized
+        (your user ID is removed, not the records themselves), so other members' history and group
+        standings are preserved. A hashed record of your account ID is kept for up to 90 days for
+        fraud prevention, then permanently removed.<br/>
+        <strong>Processing time:</strong> Deletion is immediate upon confirmation.
+      </p>
+    </div>
+
+    <form id="deleteForm">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+      <button type="submit" id="submitBtn">Send Confirmation Link</button>
+    </form>
+
+    <div class="message" id="msg"></div>
+
+    <footer>
+      Questions? Contact <a href="mailto:info@bartroseventures.com">info@bartroseventures.com</a>
+      &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+  </div>
+
+  <script>
+    // Fill in your Supabase project URL and anon key before deploying.
+    // The anon key is the public key — it is safe to include here.
+    // The service-role key must NEVER appear in this file.
+    const SUPABASE_URL      = 'https://vjubzqtcuaajyomtgyuw.supabase.co'
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqdWJ6cXRjdWFhanlvbXRneXV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0Mzc1MjIsImV4cCI6MjA5MDAxMzUyMn0.WCcmMi-JCmX1NTttXKlX4xNnmAbjDozhjY0PeVNsXGE'
+    const FUNCTION_URL      = `${SUPABASE_URL}/functions/v1/request-account-deletion`
+
+    const form      = document.getElementById('deleteForm')
+    const submitBtn = document.getElementById('submitBtn')
+    const msg       = document.getElementById('msg')
+
+    function showMsg(text, type) {
+      msg.textContent = text
+      msg.className   = `message ${type}`
+      msg.style.display = 'block'
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const email = document.getElementById('email').value.trim()
+      if (!email) return
+
+      submitBtn.disabled   = true
+      submitBtn.textContent = 'Sending…'
+      msg.style.display    = 'none'
+
+      try {
+        const res  = await fetch(FUNCTION_URL, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY },
+          body:    JSON.stringify({ email }),
+        })
+        const data = await res.json()
+
+        if (res.status === 429) {
+          showMsg(data.error ?? 'Too many requests. Please try again in an hour.', 'error')
+        } else if (!res.ok) {
+          showMsg(data.error ?? 'Something went wrong. Please try again.', 'error')
+        } else {
+          showMsg(data.message, 'success')
+          form.style.display = 'none'
+        }
+      } catch {
+        showMsg('Network error. Please check your connection and try again.', 'error')
+      } finally {
+        submitBtn.disabled    = false
+        submitBtn.textContent = 'Send Confirmation Link'
+      }
+    })
+  </script>
+</body>
+</html>
