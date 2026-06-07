@@ -1,6 +1,6 @@
-# Terms of Service
+﻿# Terms of Service
 
-**App Name:** Bet Tracker  
+**App Name:** BetCircle  
 **Effective Date:** April 24, 2026  
 **Last Updated:** April 24, 2026
 
@@ -8,13 +8,13 @@
 
 ## 1. Acceptance of Terms
 
-By creating an account or using Bet Tracker ("App," "we," "us," or "our"), you agree to these Terms of Service. If you do not agree, do not use the App. You must be at least 18 years old to use Bet Tracker.
+By creating an account or using BetCircle ("App," "we," "us," or "our"), you agree to these Terms of Service. If you do not agree, do not use the App. You must be at least 18 years old to use BetCircle.
 
 ---
 
 ## 2. No Facilitation Disclaimer
 
-Bet Tracker is not a sportsbook, bookmaker, or gambling operator.
+BetCircle is not a sportsbook, bookmaker, or gambling operator.
 
 - The App is for personal tracking and entertainment purposes only
 - No real money is wagered, earned, or transferred within the App
@@ -97,7 +97,7 @@ You may delete your account at any time via **Settings > Account > Delete Accoun
 
 ## 9. Intellectual Property
 
-All App content, design, and code is owned by Bet Tracker. Nothing in these Terms grants you ownership of any App content. Your account data belongs to you — see our Privacy Policy for details.
+All App content, design, and code is owned by BetCircle. Nothing in these Terms grants you ownership of any App content. Your account data belongs to you — see our Privacy Policy for details.
 
 ---
 
@@ -115,7 +115,7 @@ You assume all risk associated with your use of the App.
 
 ## 11. Limitation of Liability
 
-To the fullest extent permitted by law, Bet Tracker shall not be liable for any indirect, incidental, or consequential damages arising from your use of the App, including any losses related to actual gambling activity undertaken outside the App.
+To the fullest extent permitted by law, BetCircle shall not be liable for any indirect, incidental, or consequential damages arising from your use of the App, including any losses related to actual gambling activity undertaken outside the App.
 
 ---
 
@@ -127,5 +127,5 @@ We may update these Terms at any time. Material changes will be communicated via
 
 ## 13. Contact
 
-**Bet Tracker**  
+**BetCircle**  
 Email: zpbartlett@gmail.com

@@ -1,6 +1,6 @@
 # Maintenance Guide
 
-This repo hosts the public-facing legal documents for Bet Tracker. These docs are referenced by the App Store, Google Play, and the app itself — keeping them accurate is a legal requirement, not a nice-to-have.
+This repo hosts the public-facing legal documents for BetCircle. These docs are referenced by the App Store, Google Play, and the app itself — keeping them accurate is a legal requirement, not a nice-to-have.
 
 ## When to Update
 

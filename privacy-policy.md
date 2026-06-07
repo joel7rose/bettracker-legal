@@ -1,6 +1,6 @@
-# Privacy Policy
+﻿# Privacy Policy
 
-**App Name:** Bet Tracker  
+**App Name:** BetCircle  
 **Developer:** BartRose Ventures LLC LLC  
 **Effective Date:** April 24, 2026  
 **Last Updated:** May 15, 2026
@@ -9,7 +9,7 @@
 
 ## 1. Introduction
 
-Welcome to Bet Tracker ("we," "us," or "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application ("App"). Please read this policy carefully. If you disagree with its terms, please discontinue use of the App.
+Welcome to BetCircle ("we," "us," or "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application ("App"). Please read this policy carefully. If you disagree with its terms, please discontinue use of the App.
 
 ---
 
@@ -90,13 +90,13 @@ No method of transmission over the internet is 100% secure. We cannot guarantee 
 
 ## 7. Children's Privacy
 
-Bet Tracker is intended for users aged **18 and older**. We do not knowingly collect information from anyone under 18. If you believe a user under 18 has provided us with personal information, please contact us and we will delete it promptly.
+BetCircle is intended for users aged **18 and older**. We do not knowingly collect information from anyone under 18. If you believe a user under 18 has provided us with personal information, please contact us and we will delete it promptly.
 
 ---
 
 ## 8. International Users
 
-Bet Tracker is operated from the United States. If you are accessing the App from outside the United States, please be aware that your information may be transferred to and processed in the United States. By using the App, you consent to this transfer.
+BetCircle is operated from the United States. If you are accessing the App from outside the United States, please be aware that your information may be transferred to and processed in the United States. By using the App, you consent to this transfer.
 
 If you are located in the European Economic Area (EEA), you have certain rights under the General Data Protection Regulation (GDPR), including the right to access, correct, or delete your personal data. Contact us to exercise these rights.
 
@@ -127,7 +127,7 @@ Email: info@bartroseventures.com
 
 ## 12. No Facilitation Disclaimer
 
-Bet Tracker is for **entertainment and personal tracking purposes only**. The App allows users to log and analyze their own betting activity — no real money is wagered, earned, or transferred within the App. Bet Tracker is not a sportsbook, bookmaker, or gambling operator, and does not facilitate, broker, or accept any form of wager.
+BetCircle is for **entertainment and personal tracking purposes only**. The App allows users to log and analyze their own betting activity — no real money is wagered, earned, or transferred within the App. BetCircle is not a sportsbook, bookmaker, or gambling operator, and does not facilitate, broker, or accept any form of wager.
 
 ### Responsible Gaming
 
@@ -138,4 +138,4 @@ If you or someone you know has a gambling problem, help is available. We encoura
 
 ---
 
-*This privacy policy was drafted for Bet Tracker. It should be reviewed by a qualified attorney before publication.*
+*This privacy policy was drafted for BetCircle. It should be reviewed by a qualified attorney before publication.*
